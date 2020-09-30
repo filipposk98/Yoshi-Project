@@ -139,10 +139,10 @@ label.logo {
 
 .board h1{
 
-  font-size: 26px;
+  font-size: 30px;
   padding-top:30px;
   padding-left:30px;
-  padding-right: 24px;
+  padding-right: 30px;
   text-justify: inter-word;
 }
 
@@ -156,13 +156,13 @@ label.logo {
 .forest {
  position: relative;
  right: 10px;
- bottom: 247px;
+ bottom: 120px;
  
 }
 
 .start {
   position: relative;
-  bottom: 950px;
+  bottom: 850px;
   left: 745px;
 }
 
@@ -189,35 +189,49 @@ label.logo {
   justify-content: center;
   color:white;
   left: 185px;
-  top: -1460px;
+  top: -1360px;
 }
 
 .board1 h1 {
   padding-top: 55px;
   padding-left: 30px;
   padding-right: 24px;
-  font-size: 26px;
+  font-size: 28px;
 }
 
 .story {
   position: relative;
   left: 165px;
-    top: -1900px;
+    top: -1800px;
 }
 
 .board2 {
   position: relative;
-  bottom: 1620px;
+  bottom: 1475px;
   left: 500px;
   width: 630px;
   height: 320px;
   background-color: rgb(12, 70, 12);
   box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
 }
+.board2 h1 {
+  color: white;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 25px;
+  font-size: 34px;
+
+}
+
+.quizimg {
+  left: 475px;
+  bottom: 35px;
+  position: relative;
+}
 
 .frame {
   position: relative;
-  bottom: 1950px;
+  bottom: 1810px;
   left: 490px;
   width: 615px;
   height: 425px;
@@ -231,7 +245,7 @@ label.logo {
   font-size: 17px;
   position: relative;
   bottom: 1800px;
-  left: 770px;
+  left: 740px;
   width: 150px;
   height: 65px;  
   border-radius: 6px;
@@ -278,7 +292,7 @@ label.logo {
   justify-content: center;
   display: flex;
   position: relative;
-  top: -2100px;
+  top: -2250px;
   left: 320px;
   align-items: center;
   opacity: 0;
@@ -289,6 +303,10 @@ label.logo {
 .modal-container.show {
   pointer-events: auto;
   opacity: 1;
+  transition: .3s ease-in;
+  
+  
+  /* animation: float-in 0.3s ease-out forwards; */
 }
 .modal {
   margin: 0;
@@ -300,14 +318,15 @@ label.logo {
   padding: 30px 20px;
   text-align: center;
   justify-content: center;
-  cursor: pointer;
+  
   font-size: 20px;
 
 
 }
 
-.modal img {
+ .IMholder {
   border-radius: 35px;
+  box-shadow:  0 0 20px 12px rgba(14, 8, 8, 0.507);
   
 }
 .modal .window {
@@ -351,6 +370,7 @@ label.logo {
   box-shadow: 0 0 20px 12px rgba(14, 8, 8, 0.507);
   border: none;
   outline: none;
+  cursor: pointer;
 
 }
 .imageholder {
@@ -360,9 +380,14 @@ label.logo {
   bottom: 35px;
   position: relative;
   left: 250px;
+  
 }
 
-.answer1 {
+.IMholder {
+  background-color: coral;
+}
+
+.btn .Red {
   background-color: #EB1A1D;
   border-radius: 5px;
   display: flex ;
@@ -398,16 +423,9 @@ label.logo {
   box-shadow:  0 0 20px 12px rgba(14, 8, 8, 0.507);
   display: none;
 }
-@keyframes float-in {
-  from {
-    transform: translateY(-3rem);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 
-/*from here is test*/
+
+/*from here is Loosers Modal*/
 
 .ending-container {
   font-family: Yoster Island;
@@ -421,8 +439,8 @@ label.logo {
   justify-content: center;
   display: flex;
   position: relative;
-  top: -2815px;
-  left: 320px;
+  top: -2900px;
+  left: 350px;
   align-items: center;
   opacity: 0;
   pointer-events: none;
@@ -431,6 +449,8 @@ label.logo {
 .ending-container.show {
   pointer-events: auto;
   opacity: 1;
+  transition: .2s ease-in;
+  
 }
 .modal1 {
   margin: 0;
@@ -471,6 +491,10 @@ label.logo {
   z-index: 1;
   
 }
+ .modal1 .baby {
+  border-radius: 35px;
+  box-shadow:  0 0 20px 12px rgba(14, 8, 8, 0.507);
+}
 
 .question {
   font-size: 32px;
@@ -483,6 +507,96 @@ label.logo {
   width: 250px;
   height: 75px;
   left: 200px;
+  position: relative;
+  border-radius: 5px;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/*from here is Winners Modal*/
+
+.winnermodal-container{
+  font-family: Yoster Island;
+  background-color: rgb(2, 122, 38);
+  position: fixed;
+  color: white;
+  top: 0;
+  left: 0;
+  height: 75vh;
+  width: 60vw;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  top: -3700px;
+  left: 320px;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.winnermodal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+  transition: .2s ease-in;
+ 
+}
+.modal2 {
+  margin: 0;
+  background-color:rgb(1, 82, 25);
+  width: 60vw;
+  height: 69vh;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+.window2 {
+  
+    width: 68vw;
+    height: 81vh;
+    position: relative;
+    left:-75px;
+    bottom: 780px;
+    
+    
+}
+
+
+.blocks1{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 25px;
+  width: 500px;
+  height: 150px;
+  position: relative;
+  left: 185px;
+  font-size:20px;
+  
+  z-index: 1;
+  
+}
+ .modal2 .winner {
+  border-radius: 35px;
+  box-shadow:  0 0 20px 12px rgba(14, 8, 8, 0.507);
+}
+
+.question {
+  font-size: 32px;
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+
+.answer20 {
+  background-color:#e49a12;;
+  width: 250px;
+  height: 75px;
+  left: 150px;
   position: relative;
   border-radius: 5px;
   display: flex ;
